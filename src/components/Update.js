@@ -1,5 +1,5 @@
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 import { Button } from "react-bootstrap";
 import { Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ function Update() {
   }, []);
 
   const handleUpdate = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     axios.put(`https://6362a97c66f75177ea356429.mockapi.io/Crud-api/${id}`, {
       name: name,
       email: email,
@@ -50,7 +50,7 @@ function Update() {
             <Button
               variant="success"
               type="submit"
-              onClick={() => handleUpdate}
+              onClick={() => handleUpdate()}
             >
               Update
             </Button>
